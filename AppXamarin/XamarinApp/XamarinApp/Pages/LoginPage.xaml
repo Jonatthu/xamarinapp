@@ -5,7 +5,6 @@
              Title="Hhellow">
   
   <StackLayout Padding="30" BackgroundColor="#222">
-    <Label>Pepillo grillo</Label>
     <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png" 
            HorizontalOptions="Center" HeightRequest="180"  />
     <Label Text="Username" TextColor="White" />
