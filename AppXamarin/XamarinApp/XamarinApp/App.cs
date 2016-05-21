@@ -12,8 +12,11 @@ namespace XamarinApp
     {
         public App()
         {
+            var nav = new NavigationPage(new LoginPage());
             // The root page of your application
-            MainPage = new LoginPage();
+            //nav.BarBackgroundColor = Color.FromHex("#222");
+            //nav.BarTextColor = Color.White;
+            MainPage = nav;
         }
 
         protected override void OnStart()

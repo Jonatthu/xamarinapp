@@ -14,5 +14,10 @@ namespace XamarinApp.Pages
         {
             InitializeComponent();
         }
+
+        public async void SignInPressed(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
     }
 }
