@@ -16,6 +16,8 @@ namespace XamarinApp.Pages
         {
             InitializeComponent();
 
+            NavigationPage.SetHasBackButton(this, false);
+
             CitasList = new ObservableCollection<Citas>();
             CitasList.Add(new Citas
             {
@@ -30,7 +32,7 @@ namespace XamarinApp.Pages
                 AppoimentTitle = "Cirugia",
                 Place = "Mexicali",
                 DoctorName = "Doctor",
-                Hour = "9:00 am",
+                Hour = "10:00 am",
                 Image = "http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/calendar-icon.png"
             });
             CitasList.Add(new Citas
@@ -39,7 +41,7 @@ namespace XamarinApp.Pages
                 Place = "Ensenada",
                 DoctorName = "Doctor",
                 Image = "http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/calendar-icon.png",
-                Hour = "9:00 am"
+                Hour = "11:00 am"
             });
             CitasListView.IsPullToRefreshEnabled = true;
             CitasListView.ItemsSource = CitasList;
@@ -50,15 +52,15 @@ namespace XamarinApp.Pages
             var menuItem = sender as MenuItem;
             menuItem.IsDestructive = true;
 
-            if (menuItem != null)
+             if (menuItem != null)
             {
 
-                DisplayAlert("Alerta", "La cita "+ menuItem.CommandParameter.ToString(), " se cancelará", "Ok");
+                DisplayAlert("Alerta", "Cancelacion de "+ menuItem.CommandParameter.ToString(), "Ok");
                 Citas listitem = (from itm in CitasList
                                   where itm.AppoimentTitle == menuItem.CommandParameter.ToString()
                                   select itm)
                    .FirstOrDefault<Citas>();
-                CitasList.Remove(listitem);
+                   CitasList.Remove(listitem);
             }
         }
 

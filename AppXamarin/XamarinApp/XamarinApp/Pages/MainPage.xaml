@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
               x:Class="XamarinApp.Pages.MainPage"
-              Title="Appoinment List" BackgroundColor="#fafafa">
+              Title="Citas programadas" BackgroundColor="#fafafa">
 
   <ContentPage.Content>
     <ListView  x:Name="CitasListView">
@@ -16,9 +16,11 @@
             </ViewCell.ContextActions>
             <StackLayout Orientation="Vertical" Spacing="50">
               <StackLayout Orientation="Horizontal" Padding="20,0" >
-                <Image Source="{Binding Image}" HeightRequest="40"/>
-                <Label Text="{Binding AppoimentTitle}" TextColor="#f35e20"/>
-                <Label Text="{Binding DoctorName}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
+                <Image Source="{Binding Image}" HeightRequest="40" />
+                <Label Text="{Binding AppoimentTitle}" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="{Binding Place}" TextColor="Black"/>
+                <Label Text="{Binding DoctorName}" TextColor="Black" />
+                <Label Text="{Binding Hour}" TextColor="Black"/>
               </StackLayout>
             </StackLayout>
           </ViewCell>
