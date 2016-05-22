@@ -48,11 +48,12 @@ namespace XamarinApp.Pages
         public void Delete_OnClicked(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
+            menuItem.IsDestructive = true;
 
             if (menuItem != null)
             {
-                var name = menuItem.BindingContext as string;
-                DisplayAlert("Alerta", "La cita se cancelará" + name, "Ok");
+
+                DisplayAlert("Alerta", "La cita "+ menuItem.CommandParameter.ToString(), " se cancelará", "Ok");
                 Citas listitem = (from itm in CitasList
                                   where itm.AppoimentTitle == menuItem.CommandParameter.ToString()
                                   select itm)
