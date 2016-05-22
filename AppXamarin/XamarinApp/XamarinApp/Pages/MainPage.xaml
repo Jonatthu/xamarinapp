@@ -9,6 +9,11 @@
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
+            <ViewCell.ContextActions>
+              <MenuItem Text="Delete"
+                          Clicked="Delete_OnClicked"
+                          CommandParameter="{Binding AppoimentTitle}"/>
+            </ViewCell.ContextActions>
             <StackLayout Orientation="Vertical" Spacing="50">
               <StackLayout Orientation="Horizontal" Padding="20,0" >
                 <Image Source="{Binding Image}" HeightRequest="40"/>
