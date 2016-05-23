@@ -20,7 +20,7 @@ namespace XamarinApp.Pages
         public LoginPage()
         {
             InitializeComponent();
-            
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         public async void GetUserPressed(object o, EventArgs e)
