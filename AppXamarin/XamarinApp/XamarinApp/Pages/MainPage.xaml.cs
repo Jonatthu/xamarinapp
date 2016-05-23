@@ -52,7 +52,7 @@ namespace XamarinApp.Pages
             var menuItem = sender as MenuItem;
             menuItem.IsDestructive = true;
 
-             if (menuItem != null)
+            if (menuItem != null)
             {
 
                 DisplayAlert("Alerta", "Cancelacion de "+ menuItem.CommandParameter.ToString(), "Ok");
@@ -60,8 +60,15 @@ namespace XamarinApp.Pages
                                   where itm.AppoimentTitle == menuItem.CommandParameter.ToString()
                                   select itm)
                    .FirstOrDefault<Citas>();
-                   CitasList.Remove(listitem);
+                CitasList.Remove(listitem);
             }
+        }
+
+        public async void OnItemSelected(object sender, EventArgs e)
+        {
+                 var detailPage = new InformationPageModal();
+
+                 await Navigation.PushModalAsync(detailPage);
         }
 
     }

@@ -7,20 +7,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinApp.Pages;
 using XamarinApp.Services;
+using XamarinApp.ViewModels;
 
 namespace XamarinApp.Pages
 {
     public partial class LoginPage : ContentPage
     {
-
-        public string UsernameE = "Odasoft";
-        public string PasswordE = "p4ssw0rd";
+        User user = new User();
 
         public LoginPage()
         {
             InitializeComponent();
-            
+            user.Username = "Odasoft";
+            user.Password = "p4ssw0rd";
         }
 
         public async void GetUserPressed(object o, EventArgs e)
@@ -46,7 +47,7 @@ namespace XamarinApp.Pages
                 return;
             }
 
-            if (UsernameE.Equals(Username.Text) && PasswordE.Equals(Password.Text))
+            if (user.Username.Equals(Username.Text) && user.Password.Equals(Password.Text))
             {
                 waitActivityIndicator.IsRunning = true;
                 await Task.Delay(3000);
