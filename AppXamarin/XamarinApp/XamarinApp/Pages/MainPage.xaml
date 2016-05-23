@@ -10,9 +10,9 @@
         <DataTemplate>
           <ViewCell>
             <ViewCell.ContextActions>
-              <MenuItem Text="Info"
+              <MenuItem Text="Información"
                         Clicked="OnItemSelected"/>
-              <MenuItem Text="Delete"
+              <MenuItem Text="Eliminar"
                           Clicked="Delete_OnClicked"
                           IsDestructive="True"
                           CommandParameter="{Binding AppoimentTitle}" />

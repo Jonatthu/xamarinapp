@@ -22,6 +22,7 @@ namespace XamarinApp.Pages
             InitializeComponent();
             user.Username = "Odasoft";
             user.Password = "p4ssw0rd";
+            
         }
 
         public async void GetUserPressed(object o, EventArgs e)

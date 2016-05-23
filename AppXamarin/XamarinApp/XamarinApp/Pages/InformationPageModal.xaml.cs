@@ -16,7 +16,7 @@ namespace XamarinApp.Pages
         {
             InitializeComponent();
             user = new User();
-            user.Name = "Jose";
+            user.Name = "Jose Manuel";
             user.Age = 20;
             user.Address = "Privada Pamplona 6378 B52 Fraccionamiento Santa Fe 2da sección";
             user.CellphoneNumber = "6643864060";
@@ -24,13 +24,14 @@ namespace XamarinApp.Pages
             user.Hospital = "ISSSTECALI";
             user.BloodType = "Rh positive";
             user.EmergencyNumber = "6642332760";
+
             var nameLabel = new Label
             {
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 FontAttributes = FontAttributes.Bold
             };
             nameLabel.SetBinding(Label.TextProperty, "Name");
-            var dismissButton = new Button { Text = "Dismiss" };
+            var dismissButton = new Button { Text = "Aceptar" };
             dismissButton.Clicked += OnDismissButtonClicked;
 
             Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
@@ -40,14 +41,20 @@ namespace XamarinApp.Pages
                 VerticalOptions = LayoutOptions.Center,
                 Children = {
                 new StackLayout {
-                Orientation = StackOrientation.Horizontal,
-                Children = {
-                    new Label{ Text = "Nombre:", FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)), HorizontalOptions = LayoutOptions.FillAndExpand },
-                    nameLabel
-                            }
-             },
-                dismissButton
-              }
+                 Orientation = StackOrientation.Horizontal,
+                    Children = {
+                        new Label{ Text = "Paciente: " + user.Name + "\nEdad: " + user.Age + "\n"
+                        +"Es necesario que se presente a su cita en el hospital " + user.Hospital
+                        +" cualquier duda o aclaración hacerla saber a su medico.",
+                            FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+                            HorizontalOptions = LayoutOptions.FillAndExpand ,
+                            HorizontalTextAlignment = TextAlignment.Center
+                                 },
+                nameLabel
+          }
+        },
+        dismissButton
+      }
             };
         }
         public async void OnDismissButtonClicked(object sender, EventArgs args)
