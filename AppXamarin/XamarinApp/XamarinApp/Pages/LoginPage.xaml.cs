@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Android;
+using Android.App;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,7 +41,7 @@ namespace XamarinApp.Pages
             {
                 waitActivityIndicator.IsRunning = true;
                 await Task.Delay(3000);
-                await Navigation.PushAsync(new MainPage());
+                await Navigation.PushAsync(new FirstPage());
                 waitActivityIndicator.IsRunning = false;
                 Username.Text = string.Empty;
                 Password.Text = string.Empty;

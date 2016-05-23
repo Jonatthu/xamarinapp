@@ -18,6 +18,7 @@ namespace XamarinApp.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+            ActionBar.SetIcon(Android.Resource.Color.Transparent);
         }
     }
 }

@@ -8,11 +8,23 @@
       <ActivityIndicator x:Name="waitActivityIndicator"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"/>
-    <Label Text="Username" TextColor="White" />
-    <Entry x:Name="Username" BackgroundColor="#222" TextColor="#fff"  />
-    <Label Text="Password" TextColor="White" />
-    <Entry x:Name="Password" IsPassword="True" BackgroundColor="#222" TextColor="#fff" />
-    <Button Text="Sign In" HorizontalOptions="Center" Clicked="SignInPressed" />
+    <Label Text="Usuario"
+           TextColor="White" />
+    <Entry x:Name="Username"
+           BackgroundColor="#222"
+           TextColor="#fff"  />
+    <Label Text="Contraseña"
+           TextColor="White" />
+    <Entry x:Name="Password"
+           IsPassword="True"
+           BackgroundColor="#222"
+           TextColor="#fff" />
+    <Label Text="¿Olvidaste tu contraseña?"
+           TextColor="#3399CC"/>
+    <Button Text="Iniciar Sesión"
+            HorizontalOptions="End"
+            Clicked="SignInPressed"
+            BackgroundColor="#3399CC"/>
   </StackLayout>
 
 </ContentPage>

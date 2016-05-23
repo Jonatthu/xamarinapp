@@ -11,16 +11,25 @@
           <ViewCell>
             <ViewCell.ContextActions>
               <MenuItem Text="Delete"
-                          Clicked="Delete_OnClicked" IsDestructive="True"
+                          Clicked="Delete_OnClicked"
+                          IsDestructive="True"
                           CommandParameter="{Binding AppoimentTitle}" />
             </ViewCell.ContextActions>
-            <StackLayout Orientation="Vertical" Spacing="50">
-              <StackLayout Orientation="Horizontal" Padding="20,0" >
-                <Image Source="{Binding Image}" HeightRequest="40" />
-                <Label Text="{Binding AppoimentTitle}" TextColor="Black" FontAttributes="Bold" />
-                <Label Text="{Binding Place}" TextColor="Black"/>
-                <Label Text="{Binding DoctorName}" TextColor="Black" />
-                <Label Text="{Binding Hour}" TextColor="Black"/>
+            <StackLayout Orientation="Vertical"
+                         Spacing="50">
+              <StackLayout Orientation="Horizontal"
+                           Padding="20,0" >
+                <Image Source="{Binding Image}"
+                       HeightRequest="40" />
+                <Label Text="{Binding AppoimentTitle}"
+                       TextColor="Black"
+                       FontAttributes="Bold" />
+                <Label Text="{Binding Place}"
+                       TextColor="Black"/>
+                <Label Text="{Binding DoctorName}"
+                       TextColor="Black" />
+                <Label Text="{Binding Hour}"
+                       TextColor="Black"/>
               </StackLayout>
             </StackLayout>
           </ViewCell>
