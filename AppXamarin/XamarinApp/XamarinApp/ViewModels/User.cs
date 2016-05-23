@@ -8,13 +8,16 @@ namespace XamarinApp.ViewModels
 {
     public class User
     {
-        public string Name;
-        public int Age;
-        public string Address;
-        public string CellphoneNumber;
-        public string Email;
-        public string Hospital;
-        public string BloodType;
-        public string EmergencyNumber;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Address { get; set; }
+        public string CellphoneNumber { get; set; }
+        public string Email { get; set; }
+        public string Hospital { get; set; }
+        public string BloodType { get; set; }
+        public string EmergencyNumber { get; set; }
+        public string Password { get; set; }
+        public string Username { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinApp.Services;
 
 namespace XamarinApp.Pages
 {
@@ -19,6 +20,14 @@ namespace XamarinApp.Pages
         public LoginPage()
         {
             InitializeComponent();
+            
+        }
+
+        public async void GetUserPressed(object o, EventArgs e)
+        {
+            var _userService = new UserService();
+            var user = _userService.GetUser(1);
+            await DisplayAlert("This User is", $"I'm {user.Username} with the password: {user.Password}", "Ok End");
         }
 
         public async void SignInPressed(object sender, EventArgs e)
