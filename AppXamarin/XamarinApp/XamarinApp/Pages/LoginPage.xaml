@@ -2,14 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.Pages.LoginPage">
-  
+
   <StackLayout Padding="30" BackgroundColor="#222">
     <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png" HorizontalOptions="Center" HeightRequest="180"  />
-    <Label Text="Username" TextColor="White" />
-    <Entry x:Name="Username" BackgroundColor="#222" TextColor="#fff" />
-    <Label Text="Password" TextColor="White" />
-    <Entry x:Name="Password" IsPassword="True" BackgroundColor="#222" TextColor="#fff" />
-    <Button Text="Sign In" HorizontalOptions="Center" Clicked="SignInPressed" />
+      <ActivityIndicator x:Name="waitActivityIndicator"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+    <Label Text="Usuario"
+           TextColor="White" />
+    <Entry x:Name="Username"
+           BackgroundColor="#222"
+           TextColor="#fff"  />
+    <Label Text="Contraseña"
+           TextColor="White" />
+    <Entry x:Name="Password"
+           IsPassword="True"
+           BackgroundColor="#222"
+           TextColor="#fff" />
+    <Label Text="¿Olvidaste tu contraseña?"
+           TextColor="#3399CC"/>
+    <Button Text="Iniciar Sesión"
+            HorizontalOptions="End"
+            Clicked="SignInPressed"
+            BackgroundColor="#3399CC"/>
   </StackLayout>
-  
+
 </ContentPage>

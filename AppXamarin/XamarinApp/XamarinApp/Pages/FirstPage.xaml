@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.FirstPage"
+             Title ="Página principal">
+
+  <StackLayout BackgroundColor="#222">
+    
+    <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png" 
+           HorizontalOptions="Center" 
+           HeightRequest="180"/>
+    
+    <StackLayout Orientation="Vertical" Padding="120">
+      
+    <Button Text="Información de la cuenta"
+            HorizontalOptions="Center"
+            BackgroundColor="#3399CC"
+            WidthRequest="350"
+            Clicked="InformationClicked"/>
+      
+    <Button Text="Programar cita" 
+            HorizontalOptions="Center"
+            BackgroundColor="#3399CC" 
+            WidthRequest="350"
+            Clicked="ScheduleAppointmentClicked"/>
+      
+    <Button Text="Citas programadas" 
+            HorizontalOptions="Center"
+            BackgroundColor="#3399CC" 
+            Clicked="AppoinmentClicked" 
+            WidthRequest="350"/>
+      
+    <Button Text="Revisar medicamentos"
+            HorizontalOptions="Center"
+            BackgroundColor="#3399CC"
+            WidthRequest="350"/>
+      
+    </StackLayout>
+  </StackLayout>
+  
+  
+</ContentPage>
