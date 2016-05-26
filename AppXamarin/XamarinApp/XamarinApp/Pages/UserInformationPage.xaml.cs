@@ -26,6 +26,30 @@ namespace XamarinApp.Pages
             user.BloodType = "Rh positive";
             user.EmergencyNumber = "6642332760";
 
+            Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+            Content = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Children = {
+                    new StackLayout  {
+                        Orientation = StackOrientation.Horizontal,
+                        Children =
+                        {
+                            new Label  {
+                                Text = "Paciente: " + user.Name + "\n" + "Edad: " + user.Age + "\n" + "Domicilio: " + user.Address
+                                + "\n" + "Telefono Celular: " + user.CellphoneNumber + "\n" + "Correo Electrónico: " + user.Email
+                                + "\n" + "Hospital: " + user.Hospital + "\n" + "Tipo de sangre: " + user.BloodType + "\n" +
+                                "En caso de emergencia llamar al número :" + user.EmergencyNumber,
+                                FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+                                HorizontalOptions = LayoutOptions.FillAndExpand ,
+                                HorizontalTextAlignment = TextAlignment.Center
+                            },
+                        }
+
+                    }
+                }
+            };
         }
     }
 }
