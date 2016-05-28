@@ -16,8 +16,6 @@ namespace XamarinApp.Pages
         {
             InitializeComponent();
 
-            //NavigationPage.SetHasBackButton(this, false);
-
             CitasList = new ObservableCollection<Citas>();
             CitasList.Add(new Citas
             {

@@ -2,6 +2,7 @@
 using Android.App;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +16,13 @@ namespace XamarinApp.Pages
 {
     public partial class LoginPage : ContentPage
     {
-        User user = new User();
+        //User user = new User();
+        UserService _userService = new UserService();
+        
 
         public LoginPage()
         {
             InitializeComponent();
-            user.Username = "Odasoft";
-            user.Password = "p4ssw0rd";
-            
         }
 
         public async void GetUserPressed(object o, EventArgs e)
@@ -34,6 +34,8 @@ namespace XamarinApp.Pages
 
         public async void SignInPressed(object sender, EventArgs e)
         {
+            var user = _userService.GetUser(1);
+
             if (string.IsNullOrEmpty(Username.Text))
             {
                 await DisplayAlert("Alerta", "Ingrese nombre de usuario", "Aceptar");
@@ -48,7 +50,7 @@ namespace XamarinApp.Pages
                 return;
             }
 
-            if (user.Username.Equals(Username.Text) && user.Password.Equals(Password.Text))
+            if (user.Username.Equals(Username.Text) &&  user.Password.Equals(Password.Text))
             {
                 waitActivityIndicator.IsRunning = true;
                 await Task.Delay(3000);
