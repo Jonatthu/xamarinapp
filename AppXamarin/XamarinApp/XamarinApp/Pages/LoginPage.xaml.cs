@@ -16,9 +16,8 @@ namespace XamarinApp.Pages
 {
     public partial class LoginPage : ContentPage
     {
-        //User user = new User();
+
         UserService _userService = new UserService();
-        
 
         public LoginPage()
         {
@@ -30,6 +29,11 @@ namespace XamarinApp.Pages
             var _userService = new UserService();
             var user = _userService.GetUser(1);
             await DisplayAlert("This User is", $"I'm {user.Username} with the password: {user.Password}", "Ok End");
+        }
+
+        public async void ForgetPasswordMethod(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Aun no estoy implementado", "Ok");
         }
 
         public async void SignInPressed(object sender, EventArgs e)

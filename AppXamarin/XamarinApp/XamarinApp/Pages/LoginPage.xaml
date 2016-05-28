@@ -29,13 +29,18 @@
              IsPassword="True"
              BackgroundColor="#222"
              TextColor="#fff" />
-      <Label Text="¿Olvidaste tu contraseña?"
-             TextColor="#3399CC"/>
+      <Button Text="¿Olvidaste tu contraseña?"
+              TextColor="#3399CC"
+              Clicked="ForgetPasswordMethod"
+              BackgroundColor="Transparent"
+              FontSize="12"
+              HorizontalOptions="Start"/>
       <Button Text="Iniciar Sesión"
               HorizontalOptions="End"
               Clicked="SignInPressed"
-              BackgroundColor="#3399CC"/>
-      <Button Text="Get User" Clicked="GetUserPressed"></Button>
+              BackgroundColor="#3399CC" />
+      <Button Text="Get User"
+              Clicked="GetUserPressed" />
     </StackLayout>
   </ScrollView>
 </ContentPage>
