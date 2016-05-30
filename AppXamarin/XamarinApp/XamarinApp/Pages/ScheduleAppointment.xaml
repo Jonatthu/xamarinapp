@@ -5,11 +5,15 @@
   
   <StackLayout BackgroundColor="#222">
 
-    <Label Text="Aqui va un spinner que me enseñe los especialistas"
-           FontSize="20"/>
+    <Label Text="Escriba el nombre del especialista"
+           HorizontalOptions="Center" />
+    <Entry x:Name="EspecialistName"
+           HorizontalOptions="Center" />
     
-    <Label Text="Aqui va un spinner que me enseñe los lugares"
-           FontSize="20"/>
+    <Label Text="Escriba el nombre del hospital "
+           HorizontalOptions="Center" />
+    <Entry x:Name="HospitalName"
+           HorizontalOptions="Center"/>
     
     <Label Text="Elegir fecha de cita"
            TextColor="White"
@@ -26,8 +30,12 @@
            FontSize="20"
            TextColor="White"
            HorizontalOptions="Center"/>
+    
+    
 
-
+    <Button Text="Agregar"
+            HorizontalOptions="End"
+            BackgroundColor="#3399CC"/>
     
   </StackLayout>
 

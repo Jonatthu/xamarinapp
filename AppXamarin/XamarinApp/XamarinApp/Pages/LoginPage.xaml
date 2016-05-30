@@ -14,7 +14,9 @@
   
   <ScrollView>
     <StackLayout Padding="30" BackgroundColor="#222">
-      <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png" HorizontalOptions="Center" HeightRequest="180"  />
+      <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png"
+             HorizontalOptions="Center"
+             HeightRequest="180" />
       <ActivityIndicator x:Name="waitActivityIndicator"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"/>
