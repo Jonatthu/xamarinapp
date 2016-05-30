@@ -42,6 +42,9 @@
     <Compile Include="Pages\InformationPageModal.xaml.cs">
       <DependentUpon>InformationPageModal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Medicines.xaml.cs">
+      <DependentUpon>Medicines.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ScheduleAppointment.xaml.cs">
       <DependentUpon>ScheduleAppointment.xaml</DependentUpon>
     </Compile>
@@ -57,6 +60,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\MedicinesList.cs" />
     <Compile Include="ViewModels\MockUp.cs" />
     <Compile Include="ViewModels\User.cs" />
   </ItemGroup>
@@ -116,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\InformationPageModal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Medicines.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.Medicines"
+             Title="Lista de Medicinas" BackgroundColor="#fafafa">
+  <StackLayout>
+    <ListView x:Name="MedicinesListView">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="20,0">
+              <Image Source="{Binding PillImage}" HeightRequest="40" />
+              <Label Text="{Binding Name}" TextColor="Black" Font="14" FontAttributes="Bold"/>
+              <Label Text="{Binding Date}" TextColor="Black" Font="12"/>
+              <Label Text="{Binding Hour}" TextColor="Black" Font="12"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+
+</ContentPage>

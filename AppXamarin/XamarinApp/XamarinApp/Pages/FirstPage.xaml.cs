@@ -31,5 +31,10 @@ namespace XamarinApp.Pages
         {
             await Navigation.PushAsync(new ScheduleAppointment());
         }
+
+        public async void MedicinesClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Medicines());
+        }
     }
 }

@@ -27,6 +27,7 @@
         <Button Text="Revisar medicamentos"
                 HorizontalOptions="Center"
                 BackgroundColor="#3399CC"
+                Clicked="MedicinesClicked"
                 WidthRequest="350"/>
       </StackLayout>
   </ScrollView>
