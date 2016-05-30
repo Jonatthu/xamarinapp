@@ -6,14 +6,16 @@
   <StackLayout BackgroundColor="#222">
 
     <Label Text="Escriba el nombre del especialista"
-           HorizontalOptions="Center" />
-    <Entry x:Name="EspecialistName"
-           HorizontalOptions="Center" />
+           FontSize="30"
+           HorizontalOptions="Center"
+           TextColor="White"/>
+    <Entry x:Name="EspecialistName " FontSize="30"/>
     
     <Label Text="Escriba el nombre del hospital "
-           HorizontalOptions="Center" />
-    <Entry x:Name="HospitalName"
-           HorizontalOptions="Center"/>
+           FontSize="30"
+           HorizontalOptions="Center"
+           TextColor="White"/>
+    <Entry x:Name="HospitalName" FontSize="30"/>
     
     <Label Text="Elegir fecha de cita"
            TextColor="White"
@@ -30,12 +32,24 @@
            FontSize="20"
            TextColor="White"
            HorizontalOptions="Center"/>
-    
-    
 
-    <Button Text="Agregar"
+    <Label x:Name ="Comments"
+           FontSize="30"
+           Text="Comentarios"
+           HorizontalOptions="Center"
+           TextColor="White"/>
+    <Editor x:Name ="EditorComments"
+      HeightRequest="320"
+            TextColor="White"
+            FontSize="16"
+            BackgroundColor="#2c3e50" />
+
+
+    
+    <Button Text="Agendar Cita"
             HorizontalOptions="End"
-            BackgroundColor="#3399CC"/>
+            BackgroundColor="#3399CC"
+            Clicked="SendAppointment"/>
     
   </StackLayout>
 

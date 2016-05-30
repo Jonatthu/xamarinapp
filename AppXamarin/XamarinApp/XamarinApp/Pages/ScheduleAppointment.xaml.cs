@@ -13,10 +13,20 @@ namespace XamarinApp.Pages
         public ScheduleAppointment()
         {
             InitializeComponent();
+            
         }
+
         public void DateSelectedEvent(object sender, DateChangedEventArgs e)
         {
             MainLabel.Text = "Cita para el dia " + e.NewDate.ToString();
+        }
+
+        public async void SendAppointment(object sender,EventArgs e)
+        {
+            EspecialistName.Text = string.Empty;
+            HospitalName.Text = string.Empty;
+
+            await DisplayAlert("Alerta", "La cita ha sido agendada", "Aceptar");
         }
     }
 }
