@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.Pages.LoginPage">
+  
   <ContentPage.Resources>
     <ResourceDictionary>
       <OnPlatform x:Key="standardFont" x:TypeArguments="Font">
@@ -9,40 +10,54 @@
         <OnPlatform.Android>12</OnPlatform.Android>
         <OnPlatform.WinPhone>18</OnPlatform.WinPhone>
       </OnPlatform>
+      
+      <Style x:Key="LoginButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#007acc"/>
+        <Setter Property="TextColor" Value="#F0F7FF" />
+        <Setter Property="BorderRadius" Value="0"/>
+        <Setter Property="FontSize" Value="16" />
+      </Style>
+      <Style x:Key="CredentialsEntry" TargetType ="Entry">
+        <Setter Property="BackgroundColor" Value="#F0F7FF"/>
+        <Setter Property="TextColor" Value="#130606"/>
+      </Style>
+             
     </ResourceDictionary>
   </ContentPage.Resources>
   
-  <ScrollView>
-    <StackLayout Padding="30" BackgroundColor="#222">
-      <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png"
+  
+    <StackLayout Spacing="0" Padding="10" BackgroundColor="#222">
+      
+        <StackLayout Spacing="5" Padding="10">
+          <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png"
+             HorizontalOptions="CenterAndExpand"
+             VerticalOptions="Start"/>
+          <ActivityIndicator x:Name="waitActivityIndicator"
              HorizontalOptions="Center"
-             HeightRequest="180" />
-      <ActivityIndicator x:Name="waitActivityIndicator"
-                     HorizontalOptions="Center"
-                     VerticalOptions="Center"/>
-      <Label Text="Usuario"
-             TextColor="White" />
-      <Entry x:Name="Username"
-             BackgroundColor="#222"
-             TextColor="#fff"  />
-      <Label Text="Contraseña"
-             TextColor="White" />
-      <Entry x:Name="Password"
+             VerticalOptions="Center"/>
+        </StackLayout>
+      
+        <StackLayout Spacing="20" Padding="25" HorizontalOptions="Center" WidthRequest="240">
+          <Entry x:Name="Username"
+             Placeholder="Nombre de Usuario"
+             Style="{StaticResource CredentialsEntry}"/>
+          <Entry x:Name="Password"
+             Placeholder="Contraseña"
              IsPassword="True"
-             BackgroundColor="#222"
-             TextColor="#fff" />
-      <Button Text="¿Olvidaste tu contraseña?"
+             Style="{StaticResource CredentialsEntry}" />
+          <Button Text="¿Olvidaste tu contraseña?"
               TextColor="#3399CC"
               Clicked="ForgetPasswordMethod"
               BackgroundColor="Transparent"
               FontSize="12"
               HorizontalOptions="Start"/>
-      <Button Text="Iniciar Sesión"
-              HorizontalOptions="End"
+      </StackLayout>
+      <StackLayout Spacing="25" Padding="0">
+           <Button Text="Iniciar Sesión"
+              HorizontalOptions="Center"
               Clicked="SignInPressed"
-              BackgroundColor="#3399CC" />
-      <Button Text="Get User"
-              Clicked="GetUserPressed" />
+              HeightRequest="40"
+              Style="{StaticResource LoginButton}" />
+      </StackLayout>
     </StackLayout>
-  </ScrollView>
 </ContentPage>
