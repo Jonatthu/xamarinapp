@@ -19,7 +19,7 @@ namespace XamarinApp.Pages
         }
         public async void AppoinmentClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new AppointmentListView());
         }
 
         public async void InformationClicked(object sender, EventArgs e)
@@ -36,5 +36,7 @@ namespace XamarinApp.Pages
         {
             await Navigation.PushAsync(new Medicines());
         }
+        
+
     }
 }

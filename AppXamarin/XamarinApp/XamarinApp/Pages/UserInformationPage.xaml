@@ -2,16 +2,136 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.Pages.UserInformationPage"
-             Title="Informacion de usuario">
-  
-  <ContentPage.Padding>
-    
-    <OnPlatform x:TypeArguments="Thickness" iOS="0,40,0,0" />
-  </ContentPage.Padding>
-  <ContentPage.Content>
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-     
-    </StackLayout>
-  </ContentPage.Content>
+             BackgroundColor="#262626">
 
+  <StackLayout>
+
+    <StackLayout BackgroundColor="#404040" HeightRequest="100" VerticalOptions="Center">
+      <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Datos Generales"
+         HorizontalOptions="Center"
+         FontSize="{Binding LargeFontSize}"
+         TextColor="#bfbfbf"/>
+      </StackLayout>
+    </StackLayout>
+    
+  
+  <Grid Padding="10,30,10,0" >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    
+      <!--row0-->
+    <StackLayout Spacing="5" Grid.Row="0" Grid.Column="0"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Nombre"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding Nombre}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+    <StackLayout Spacing="5" Grid.Row="0" Grid.Column="1"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Edad"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding Edad}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+
+    <!--row1-->
+
+    <StackLayout Spacing="5" Grid.Row="1" Grid.Column="0"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="CURP"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding CURP}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+    <StackLayout Spacing="5" Grid.Row="1" Grid.Column="1"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Grupo Etnico"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding GrupoEtnico}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+
+    <!--row2-->
+    <StackLayout Spacing="5" Grid.Row="2" Grid.Column="0"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Religion"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding Religion}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+    <StackLayout Spacing="5" Grid.Row="2" Grid.Column="1"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Tipo de Sangre"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding TipoDeSangre}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+
+
+    <!--row3-->
+    <StackLayout Spacing="5" Grid.Row="3" Grid.Column="0"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Discapacidad"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding Discapacidad}"/>
+      <Label Text="{Binding Discapacidad}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+    <StackLayout Spacing="5" Grid.Row="3" Grid.Column="1"
+                 Padding="10"
+                 VerticalOptions="Center">
+      <Label Text="Nivel Socienomico"
+             HorizontalOptions="Start"
+             FontAttributes="Bold"
+             FontSize="{Binding SmallFontSize}"/>
+      <Label Text="{Binding NivelSocioeconomico}"
+             HorizontalOptions="Start"
+             FontSize="{Binding SmallFontSize}"/>
+    </StackLayout>
+
+
+    
+
+  </Grid>
+  </StackLayout>
 </ContentPage>
