@@ -28,10 +28,10 @@
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 BackgroundColor="#333333"
-                Clicked="InformationClicked"/>
+                Clicked="FileCaseClicked"/>
         <Label  FontSize="20" 
                 FontAttributes="Italic" 
-                Text="Datos Generales" 
+                Text="Expediente" 
                 HorizontalOptions="Center"/>
       </StackLayout>
       

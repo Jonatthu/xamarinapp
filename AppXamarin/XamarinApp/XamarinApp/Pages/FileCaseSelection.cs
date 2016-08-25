@@ -20,6 +20,7 @@ namespace XamarinApp.Pages
 
         public FileCaseSelection()
         {
+            Title = "Expediente";
             buttonDictionary = new Dictionary<string, string>
             {
                 { "Datos Generales","GeneralInfoClicked" },{"Citas","" }
@@ -42,8 +43,7 @@ namespace XamarinApp.Pages
                 Children = { listView}
             };
 
-
-
+           
 
         }
 
