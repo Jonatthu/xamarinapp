@@ -5,31 +5,41 @@
              Title ="Página principal">
   
   <ScrollView>
-    <StackLayout BackgroundColor="#222" Orientation="Vertical" Padding="100">
-        <Button Text="Información de la cuenta"
-                HorizontalOptions="Center"
-                BackgroundColor="#3399CC"
-                WidthRequest="350"
-                Clicked="InformationClicked"/>
 
-        <Button Text="Programar cita"
-                HorizontalOptions="Center"
-                BackgroundColor="#3399CC"
-                WidthRequest="350"
-                Clicked="ScheduleAppointmentClicked"/>
+    
+    
+    
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" Padding="10">
 
-        <Button Text="Citas programadas"
-                HorizontalOptions="Center"
-                BackgroundColor="#3399CC"
-                Clicked="AppoinmentClicked"
-                WidthRequest="350"/>
-
-        <Button Text="Revisar medicamentos"
-                HorizontalOptions="Center"
-                BackgroundColor="#3399CC"
-                Clicked="MedicinesClicked"
-                WidthRequest="350"/>
+      <StackLayout Spacing="10" HorizontalOptions="Center" Padding="20">
+        <Button
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="#333333"
+                Clicked="AppoinmentClicked"/>
+        <Label  FontSize="20"
+                FontAttributes="Italic"
+                Text="Citas"
+                HorizontalOptions="Center"/>
       </StackLayout>
+      
+      <StackLayout Spacing="10" HorizontalOptions="Center" Padding="20">
+        <Button 
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="#333333"
+                Clicked="FileCaseClicked"/>
+        <Label  FontSize="20" 
+                FontAttributes="Italic" 
+                Text="Expediente" 
+                HorizontalOptions="Center"/>
+      </StackLayout>
+      
+      
+      
+      
+      
+    </StackLayout>
   </ScrollView>
  
   
