@@ -13,24 +13,26 @@
   </ContentPage.Resources>
   
   <ScrollView>
-    <StackLayout Padding="30" BackgroundColor="#222">
+    <StackLayout Padding="90,30,90,30" Spacing="15" BackgroundColor="#222">
       <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png"
              HorizontalOptions="Center"
              HeightRequest="180" />
       <ActivityIndicator x:Name="waitActivityIndicator"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"/>
-      <Label Text="Usuario"
-             TextColor="White" />
-      <Entry x:Name="Username"
-             BackgroundColor="#222"
-             TextColor="#fff"  />
-      <Label Text="Contraseña"
-             TextColor="White" />
+      <StackLayout Spacing="60">
+        <Entry x:Name="Username"
+             Placeholder="Usuario"
+             PlaceholderColor="#8c8c8c"
+             BackgroundColor="#ffffff"
+             TextColor="#0"  />
       <Entry x:Name="Password"
+             PlaceholderColor="#8c8c8c"
+             Placeholder="Contraseña"
              IsPassword="True"
-             BackgroundColor="#222"
-             TextColor="#fff" />
+             BackgroundColor="#ffffff"
+             TextColor="#0" />
+      </StackLayout>
       <Button Text="¿Olvidaste tu contraseña?"
               TextColor="#3399CC"
               Clicked="ForgetPasswordMethod"
@@ -38,11 +40,11 @@
               FontSize="12"
               HorizontalOptions="Start"/>
       <Button Text="Iniciar Sesión"
-              HorizontalOptions="End"
+              FontSize="20"
+              HorizontalOptions="Center"
               Clicked="SignInPressed"
+              BorderRadius="0"
               BackgroundColor="#3399CC" />
-      <Button Text="Get User"
-              Clicked="GetUserPressed" />
     </StackLayout>
   </ScrollView>
 </ContentPage>

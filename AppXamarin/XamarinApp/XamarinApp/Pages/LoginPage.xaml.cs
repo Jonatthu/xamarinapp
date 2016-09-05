@@ -57,7 +57,7 @@ namespace XamarinApp.Pages
             if (user.Username.Equals(Username.Text) &&  user.Password.Equals(Password.Text))
             {
                 waitActivityIndicator.IsRunning = true;
-                await Task.Delay(3000);
+                await Task.Delay(1500);
                 await Navigation.PushAsync(new FirstPage());
                 waitActivityIndicator.IsRunning = false;
                 Username.Text = string.Empty;
