@@ -36,10 +36,6 @@ namespace XamarinApp.Pages
         {
             await Navigation.PushAsync(new Medicines());
         }
-        public async void FileCaseClicked(object sender , EventArgs e)
-        {
-            await Navigation.PushAsync(new FileCaseSelection());
-        }
         
 
     }
