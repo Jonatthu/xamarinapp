@@ -10,7 +10,7 @@
                 HorizontalOptions="Center"
                 BackgroundColor="#3399CC"
                 WidthRequest="350"
-                Clicked="InformationClicked"/>
+                Clicked="InformationClicked"/> 
 
         <Button Text="Programar cita"
                 HorizontalOptions="Center"
