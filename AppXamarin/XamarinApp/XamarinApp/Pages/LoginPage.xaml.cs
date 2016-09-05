@@ -58,7 +58,8 @@ namespace XamarinApp.Pages
             {
                 waitActivityIndicator.IsRunning = true;
                 await Task.Delay(1500);
-                await Navigation.PushAsync(new FirstPage());
+                App.Current.MainPage = new NavigationPage(new MainPage());
+                //await Navigation.PushAsync(new FirstPage());
                 waitActivityIndicator.IsRunning = false;
                 Username.Text = string.Empty;
                 Password.Text = string.Empty;

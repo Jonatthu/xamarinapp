@@ -25,13 +25,13 @@
              Placeholder="Usuario"
              PlaceholderColor="#8c8c8c"
              BackgroundColor="#ffffff"
-             TextColor="#0"  />
+             TextColor="#000000"  />
       <Entry x:Name="Password"
              PlaceholderColor="#8c8c8c"
              Placeholder="Contraseña"
              IsPassword="True"
              BackgroundColor="#ffffff"
-             TextColor="#0" />
+             TextColor="#000000" />
       </StackLayout>
       <Button Text="¿Olvidaste tu contraseña?"
               TextColor="#3399CC"
