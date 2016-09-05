@@ -35,7 +35,7 @@ namespace XamarinApp.Pages
             listView.SeparatorColor = separatorColor;
             listView.ItemsSource = buttonSource;
             listView.RowHeight = rowHeight;
-            //listView.ItemTapped
+            
             
             Content = new StackLayout
             {
