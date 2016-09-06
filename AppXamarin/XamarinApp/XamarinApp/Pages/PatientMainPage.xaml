@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.PatientMainPage"
+             BackgroundColor="#E8E8E8"
+             Title="Panel de control">
+  <ScrollView>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" Padding="10">
+      <StackLayout Spacing="10" HorizontalOptions="Center" Padding="20">
+        <Button
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                Clicked="AppointmentClicked"
+                Image="Citas.png"/> 
+        <Label  FontSize="20"
+                FontAttributes="Italic"
+                Text="Citas"
+                HorizontalOptions="Center"
+                TextColor="#4A4A4A"/>
+      </StackLayout>
+      <StackLayout Spacing="10" HorizontalOptions="Center" Padding="20">
+        <Button
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                Clicked="ExpedientClicked"
+                Image="expediente.png"/>
+        <Label  FontSize="20"
+                FontAttributes="Italic"
+                Text="Expediente"
+                HorizontalOptions="Center"
+                TextColor="#4A4A4A"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

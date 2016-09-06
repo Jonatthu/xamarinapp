@@ -36,6 +36,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Pages\AppointmentInformation.xaml.cs">
+      <DependentUpon>AppointmentInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AppointmentListView.cs" />
+    <Compile Include="Pages\FileCaseSelectionP.xaml.cs">
+      <DependentUpon>FileCaseSelectionP.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
     </Compile>
@@ -45,12 +55,18 @@
     <Compile Include="Pages\Medicines.xaml.cs">
       <DependentUpon>Medicines.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PatientMainPage.xaml.cs">
+      <DependentUpon>PatientMainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ScheduleAppointment.xaml.cs">
       <DependentUpon>ScheduleAppointment.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\UserInformationPage.xaml.cs">
       <DependentUpon>UserInformationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\AppointmentService.cs" />
+    <Compile Include="Services\DoctorService.cs" />
+    <Compile Include="Services\PatientService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="ViewModels\Citas.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
@@ -126,6 +142,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Medicines.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PatientMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FileCaseSelectionP.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AppointmentInformation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

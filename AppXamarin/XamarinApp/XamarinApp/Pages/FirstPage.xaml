@@ -11,10 +11,10 @@
                 BackgroundColor="#3399CC" 
                 WidthRequest="350"
                 Clicked="InformationClicked"/>
-
+ 
         <Button Text="Programar cita"
                 HorizontalOptions="Center"
-                BackgroundColor="#3399CC"
+                BackgroundColor="#3399CC" 
                 WidthRequest="350"
                 Clicked="ScheduleAppointmentClicked"/>
 
