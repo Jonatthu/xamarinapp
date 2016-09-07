@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinApp.Models;
+using XamarinApp.Services;
 
 namespace XamarinApp.Pages
 {
@@ -15,9 +17,11 @@ namespace XamarinApp.Pages
             InitializeComponent();
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
         }
-        public async void AppointmentClicked(object sender, EventArgs e)
+        public async void AppointmentsClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AppointmentListView());
+            ICollection<Appointment> appointments = new AppointmentService().GetAllAppointments();//change for web API
+            var appointmentsListView = new AppointmentListView(appointments);
+            await Navigation.PushAsync(appointmentsListView);
         }
 
         public async void ExpedientClicked(object sender, EventArgs e)

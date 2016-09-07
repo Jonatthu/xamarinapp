@@ -17,7 +17,7 @@ namespace XamarinApp.Pages
         }
         public async void PatientInfoClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AppointmentInformation());
+            await Navigation.PushAsync(new UserInformationPage());
         }
 
         public async void PatientAppointmentClicked(object sender, EventArgs e)

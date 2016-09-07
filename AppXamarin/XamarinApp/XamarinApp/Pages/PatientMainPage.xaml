@@ -11,7 +11,7 @@
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 BackgroundColor="Transparent"
-                Clicked="AppointmentClicked"
+                Clicked="AppointmentsClicked"
                 Image="Citas.png"/> 
         <Label  FontSize="20"
                 FontAttributes="Italic"

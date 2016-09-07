@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinApp.Models;
 using XamarinApp.Services;
 
 namespace XamarinApp.Pages
 {
     public class AppointmentListView : ContentPage
     {
-        public AppointmentListView()
+        
+
+        public AppointmentListView(ICollection<Appointment> _Appointments)
         {
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
             var greyColor = Color.FromHex("#262626");
@@ -20,7 +23,7 @@ namespace XamarinApp.Pages
             ListView listView = new ListView
             {
                 SeparatorColor = greyColor,
-                ItemsSource = new AppointmentService().GetAllAppointments(),
+                ItemsSource = _Appointments,
                 HasUnevenRows = false,
                 RowHeight = 180,
                 ItemTemplate = new DataTemplate(() =>
@@ -108,5 +111,7 @@ namespace XamarinApp.Pages
             };
 
         }
+        
+
     }
 }

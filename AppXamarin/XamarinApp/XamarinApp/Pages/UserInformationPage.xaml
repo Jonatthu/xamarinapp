@@ -2,16 +2,118 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.Pages.UserInformationPage"
-             Title="Informacion de usuario">
+             Title="Informacion de usuario"
+             BackgroundColor="#333333">
   
   <ContentPage.Padding>
-    
     <OnPlatform x:TypeArguments="Thickness" iOS="0,40,0,0" />
   </ContentPage.Padding>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BoldLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="#b3b3b3" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+      </Style>
+      <Style x:Key="ValueLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextColor" Value="#b3b3b3" />
+      </Style>
+    </ResourceDictionary>
+  
+  
+  </ContentPage.Resources>
   <ContentPage.Content>
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-     
-    </StackLayout>
-  </ContentPage.Content>
+    <ScrollView Padding="40,100,40,30" HorizontalOptions="Center">
+      
+      <Grid RowSpacing="40" ColumnSpacing="35">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="0" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="3" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="4" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
 
+        <StackLayout Grid.ColumnSpan="3" Grid.Row="6" Grid.Column="0">
+          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
+          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="3">
+          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+        </StackLayout>
+        
+      
+       
+        
+      </Grid>
+    
+    </ScrollView>
+  </ContentPage.Content>
 </ContentPage>
