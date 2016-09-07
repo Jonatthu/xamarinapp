@@ -22,7 +22,7 @@ namespace XamarinApp.Pages
 
         public async void PatientAppointmentClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alerta", "Aun no estoy implementado", "Ok");
+            await Navigation.PushAsync(new AppointmentsTabbedPage());
         }
     }
 }

@@ -43,6 +43,7 @@
       <DependentUpon>AppointmentInformation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AppointmentListView.cs" />
+    <Compile Include="Pages\AppointmentsTabbedPage.cs" />
     <Compile Include="Pages\FileCaseSelectionP.xaml.cs">
       <DependentUpon>FileCaseSelectionP.xaml</DependentUpon>
     </Compile>
