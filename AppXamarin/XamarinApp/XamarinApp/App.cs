@@ -12,7 +12,7 @@ namespace XamarinApp
     {
         public App()
         {
-            var nav = new NavigationPage(new PatientMainPage());
+            var nav = new NavigationPage(new AddPatientPage());
             // The root page of your application
             //nav.BarBackgroundColor = Color.FromHex("#222");
             //nav.BarTextColor = Color.White;

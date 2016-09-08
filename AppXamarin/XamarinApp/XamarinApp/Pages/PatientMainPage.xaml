@@ -4,11 +4,18 @@
              x:Class="XamarinApp.Pages.PatientMainPage"
              BackgroundColor="#E8E8E8"
              Title="Panel de control">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Config"
+                 Order="Secondary"
+                 Clicked="MedexpConfigurationClicked"/>
+  </ContentPage.ToolbarItems>
+  
   <ScrollView>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" Padding="10">
       <StackLayout Spacing="10" HorizontalOptions="Center" Padding="20">
         <Button
-                HorizontalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"  
                 VerticalOptions="CenterAndExpand"
                 BackgroundColor="Transparent"
                 Clicked="AppointmentsClicked"
