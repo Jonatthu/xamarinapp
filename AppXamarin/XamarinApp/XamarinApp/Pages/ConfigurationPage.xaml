@@ -12,7 +12,7 @@
     <Grid Grid.Column="0">
       <Label Text="Notificaciones"
              TextColor="#9B9B9B"
-             FontSize="14"/>
+             FontSize="14"/>  
     </Grid>
 
     <Grid Grid.Column="1">

@@ -75,6 +75,7 @@
     <Compile Include="PatientCell.cs" />
     <Compile Include="Services\AppointmentService.cs" />
     <Compile Include="Services\DoctorService.cs" />
+    <Compile Include="Services\ILocalNotifications.cs" />
     <Compile Include="Services\PatientService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="ViewModels\Citas.cs" />
