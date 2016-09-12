@@ -62,12 +62,7 @@ namespace XamarinApp.Pages
             }
         }
 
-        public async void OnItemSelected(object sender, EventArgs e)
-        {            
-                 var detailPage = new InformationPageModal();
-
-                 await Navigation.PushModalAsync(detailPage);
-        }
+        
 
     }
 }

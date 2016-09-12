@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using XamarinApp.ViewModels;
-
 namespace XamarinApp.Pages
 {
-    public partial class UserInformationPage : ContentPage
+    public class SelectionTextCell:TextCell
     {
-        public User user;
-
-        public UserInformationPage()
+        public SelectionTextCell(string Text,Color color)
         {
-            InitializeComponent();
+            this.TextColor = color;
+            this.Text = Text;
         }
     }
 }

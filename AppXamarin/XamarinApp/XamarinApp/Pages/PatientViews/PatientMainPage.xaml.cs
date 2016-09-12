@@ -1,32 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using XamarinApp.Models;
+using XamarinApp.Pages;
+
 using XamarinApp.Services;
 
-namespace XamarinApp.Pages
+namespace XamarinApp.Pages.PatientViews
 {
     public partial class PatientMainPage : ContentPage
     {
-        public PatientMainPage()
+        Patient patientLoggedIn { get; set; }
+
+        public PatientMainPage(Patient patient)
         {
             InitializeComponent();
+            patientLoggedIn = patient;
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
+            Title = patient.Name;
         }
         public async void AppointmentsClicked(object sender, EventArgs e)
         {
-            ICollection<Appointment> appointments = new AppointmentService().GetAllAppointments();//change for web API
-            var appointmentsListView = new AppointmentListView(appointments);
+            var appointments = new AppointmentService().GetAllAppointmentsByPatientId(patientLoggedIn.Id, "Pendiente");
+            var appointmentsListView = new PatientAppointmentListView(appointments);
+            appointmentsListView.Title = "Citas";
             await Navigation.PushAsync(appointmentsListView);
         }
 
         public async void ExpedientClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new FileCaseSelectionP());
+            await Navigation.PushAsync(new FileCaseSelectionListView(patientLoggedIn.Id));
         }
     }
 }

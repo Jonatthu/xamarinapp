@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinApp.Models;
+using XamarinApp.Services;
 
 namespace XamarinApp.Pages
 {
@@ -24,7 +26,8 @@ namespace XamarinApp.Pages
 
         public async void InformationClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UserInformationPage());
+            Patient patient = new PatientService().GetPatientByUserId(2);
+            await Navigation.PushAsync(new UserInformationPage(patient));
         }
 
         public async void ScheduleAppointmentClicked(object sender, EventArgs e)

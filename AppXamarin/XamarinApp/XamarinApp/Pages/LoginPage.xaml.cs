@@ -1,5 +1,4 @@
-﻿using Android;
-using Android.App;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,7 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinApp.Models;
 using XamarinApp.Pages;
+using XamarinApp.Pages.PatientViews;
 using XamarinApp.Services;
 using XamarinApp.ViewModels;
 
@@ -17,19 +18,16 @@ namespace XamarinApp.Pages
     public partial class LoginPage : ContentPage
     {
 
-        UserService _userService = new UserService();
+        AccountsService _userService = new AccountsService();
+        
+
 
         public LoginPage()
         {
             InitializeComponent();
         }
 
-        public async void GetUserPressed(object o, EventArgs e)
-        {
-            var _userService = new UserService();
-            var user = _userService.GetUser(1);
-            await DisplayAlert("This User is", $"I'm {user.Username} with the password: {user.Password}", "Ok End");
-        }
+        
 
         public async void ForgetPasswordMethod(object sender, EventArgs e)
         {
@@ -38,37 +36,36 @@ namespace XamarinApp.Pages
 
         public async void SignInPressed(object sender, EventArgs e)
         {
-            var user = _userService.GetUser(1);
+            var service = new AccountsService();
 
-            if (string.IsNullOrEmpty(Username.Text))
+            if (string.IsNullOrEmpty(UsernameEntry.Text))
             {
                 await DisplayAlert("Alerta", "Ingrese nombre de usuario", "Aceptar");
-                Username.Focus();
+                UsernameEntry.Focus();
                 return;
             }
 
-            if (string.IsNullOrEmpty(Password.Text))
+            if (string.IsNullOrEmpty(PasswordEntry.Text))
             {
                 await DisplayAlert("Alerta", "Ingrese contraseña", "Aceptar");
-                Password.Focus();
+                PasswordEntry.Focus();
                 return;
             }
 
-            if (user.Username.Equals(Username.Text) &&  user.Password.Equals(Password.Text))
-            {
+            if (service.Authentication(UsernameEntry.Text,PasswordEntry.Text))
+            { 
                 waitActivityIndicator.IsRunning = true;
                 await Task.Delay(1500);
-                //App.Current.MainPage = new NavigationPage(new PatientMainPage());
-                await Navigation.PushAsync(new PatientMainPage());
+                Patient patient = service.GetPatientByUserId(1);//modify to get a patient depending on userId
+                App.Current.MainPage = new NavigationPage(new PatientMainPage(patient));
                 waitActivityIndicator.IsRunning = false;
-                Username.Text = string.Empty;
-                Password.Text = string.Empty;
+                UsernameEntry.Text = string.Empty;
+                PasswordEntry.Text = string.Empty;
             }
             else
             {
                 await DisplayAlert("Alerta", "Usuario o contraseña incorrectos", "Aceptar");
-                Username.Text = string.Empty;
-                Password.Text = string.Empty;
+                PasswordEntry.Text = string.Empty;
                 return;
             }
         }

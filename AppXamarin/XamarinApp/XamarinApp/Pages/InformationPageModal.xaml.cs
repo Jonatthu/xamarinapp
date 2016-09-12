@@ -5,25 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinApp.Models;
 using XamarinApp.ViewModels;
 
 namespace XamarinApp.Pages
 {
     public partial class InformationPageModal : ContentPage
     {
-        public User user;
+        public Account user;
         public InformationPageModal()
         {
             InitializeComponent();
-            user = new User();
+            user = new Account();
             user.Name = "Jose Manuel";
             user.Age = 20;
-            user.Address = "Privada Pamplona 6378 B52 Fraccionamiento Santa Fe 2da sección";
             user.CellphoneNumber = "6643864060";
             user.Email = "alvarez.m23@hotmail.com";
-            user.Hospital = "ISSSTECALI";
-            user.BloodType = "Rh positive";
-            user.EmergencyNumber = "6642332760";
 
             var nameLabel = new Label
             {
@@ -44,7 +41,7 @@ namespace XamarinApp.Pages
                  Orientation = StackOrientation.Horizontal,
                     Children = {
                         new Label{ Text = "Paciente: " + user.Name + "\nEdad: " + user.Age + "\n"
-                        +"Es necesario que se presente a su cita en el hospital " + user.Hospital
+                        
                         +" cualquier duda o aclaración hacerla saber a su medico.",
                             FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
                             HorizontalOptions = LayoutOptions.FillAndExpand ,

@@ -9,11 +9,9 @@ using XamarinApp.Services;
 
 namespace XamarinApp.Pages
 {
-    public class AppointmentListView : ContentPage
+    public class DoctorAppointmentListView : ContentPage
     {
-        
-
-        public AppointmentListView(ICollection<Appointment> _Appointments)
+        public DoctorAppointmentListView(ICollection<Appointment> _Appointments)
         {
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
             var greyColor = Color.FromHex("#262626");

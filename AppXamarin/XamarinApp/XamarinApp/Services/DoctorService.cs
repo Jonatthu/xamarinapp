@@ -9,15 +9,19 @@ namespace XamarinApp.Services
 {
     public class DoctorService
     {
-        public Doctor GetDoctor(int Id)
+        public Doctor GetDoctor()
         {
             return new Doctor()
             {
-                Id = 1,
-                Name = "zheng",
-                Email = "zheng@me.com",
-                Username = "zheng",
-                Password = "123"
+                Name = "Zheng",
+                Address = "Los Arboles",
+                Age = 50,
+                CellphoneNumber = "6645746372",
+                Hospital = "Del Prado",
+                CURP = "sdfas3234234",
+                UserType = "Doctor",
+                AccountId = 2,
+                Id = 2
             };
         }
     }

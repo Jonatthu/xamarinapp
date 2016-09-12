@@ -39,36 +39,42 @@
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Pages\AppointmentInformation.xaml.cs">
       <DependentUpon>AppointmentInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AppointmentListView.cs" />
-    <Compile Include="Pages\AppointmentsTabbedPage.cs" />
+    <Compile Include="Pages\DoctorViews\DoctorAppointmentListView.cs" />
+    <Compile Include="Pages\DoctorViews\DoctorAppointmentsTabbedPage.cs" />
+    <Compile Include="Pages\DoctorViews\DoctorMainPage.xaml.cs">
+      <DependentUpon>DoctorMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DoctorViews\DoctorPatientsListView.cs" />
+    <Compile Include="Pages\FileCaseSelectionListView.cs" />
     <Compile Include="Pages\FileCaseSelectionP.xaml.cs">
       <DependentUpon>FileCaseSelectionP.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\InformationPageModal.xaml.cs">
-      <DependentUpon>InformationPageModal.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Medicines.xaml.cs">
       <DependentUpon>Medicines.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PatientMainPage.xaml.cs">
+    <Compile Include="Pages\PatientViews\PatientAppoinmentsTabbedPage.cs" />
+    <Compile Include="Pages\PatientViews\PatientAppointmentListView.cs" />
+    <Compile Include="Pages\PatientViews\PatientMainPage.xaml.cs">
       <DependentUpon>PatientMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ScheduleAppointment.xaml.cs">
       <DependentUpon>ScheduleAppointment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\UserInformationPage.xaml.cs">
+    <Compile Include="Pages\SelectionTextCell.cs" />
+    <Compile Include="Pages\Shared\UserInformationPage.xaml.cs">
       <DependentUpon>UserInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\AppointmentService.cs" />
     <Compile Include="Services\DoctorService.cs" />
     <Compile Include="Services\PatientService.cs" />
-    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\AccountService.cs" />
     <Compile Include="ViewModels\Citas.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -79,7 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MedicinesList.cs" />
     <Compile Include="ViewModels\MockUp.cs" />
-    <Compile Include="ViewModels\User.cs" />
+    <Compile Include="Models\Account.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">
@@ -124,7 +130,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\UserInformationPage.xaml">
+    <EmbeddedResource Include="Pages\Shared\UserInformationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -136,19 +142,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\InformationPageModal.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Pages\Medicines.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\PatientMainPage.xaml">
+    <EmbeddedResource Include="Pages\PatientViews\PatientMainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -161,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\AppointmentInformation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\DoctorViews\DoctorMainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

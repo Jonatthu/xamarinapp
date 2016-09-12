@@ -9,7 +9,7 @@
       <ColumnDefinition Width="1*" />
     </Grid.ColumnDefinitions>
 
-    <Grid Grid.Column="0">
+    <Grid Grid.Column="0"> 
       <Label Text="Nombre: " TextColor="#4A4A4A" />
       <Label Text="{Binding appointments.Patient.Name}" TextColor="#4A4A4A"/>
       <Label Text="CURP: " TextColor="#4A4A4A" />

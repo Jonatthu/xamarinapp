@@ -48,66 +48,50 @@
         
         <StackLayout Grid.ColumnSpan="3" Grid.Row="0" Grid.Column="0">
           <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+          <Label Text="{Binding Name}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         <StackLayout Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="3">
           <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+          <Label Text="{Binding Age}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         
         <StackLayout Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="0">
-          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+          <Label Text="CURP" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding CURP}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         <StackLayout Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="3">
-          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Grupo Etnico" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding EthnicGroup}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         
         <StackLayout Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="0">
-          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Religion" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding Religion}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         <StackLayout Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="3">
-          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Tipo de Sangre" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding BloodType}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         
         <StackLayout Grid.ColumnSpan="3" Grid.Row="3" Grid.Column="0">
-          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Discapacidad" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding Disability}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         <StackLayout Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="3">
-          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Nivel Socioeconómico" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding SocioEconomicLevel}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         
         <StackLayout Grid.ColumnSpan="3" Grid.Row="4" Grid.Column="0">
-          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Email" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding Email}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="3">
-          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
+          <Label Text="Celular" Style="{StaticResource BoldLabel}"/>
+          <Label Text="{Binding CellphoneNumber}" Style="{StaticResource ValueLabel}"/>
         </StackLayout>
         
-        <StackLayout Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="0">
-          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
-        </StackLayout>
-        <StackLayout Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="3">
-          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
-        </StackLayout>
-
-        <StackLayout Grid.ColumnSpan="3" Grid.Row="6" Grid.Column="0">
-          <Label Text="Paciente" Style="{StaticResource BoldLabel}"/>
-          <Label Text="Anonimo Anonimo Anonimo" Style="{StaticResource ValueLabel}"/>
-        </StackLayout>
-        <StackLayout Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="3">
-          <Label Text="Edad" Style="{StaticResource BoldLabel}"/>
-          <Label Text="18" Style="{StaticResource ValueLabel}"/>
-        </StackLayout>
+        
         
       
        

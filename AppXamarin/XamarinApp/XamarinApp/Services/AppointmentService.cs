@@ -12,119 +12,53 @@ namespace XamarinApp.Services
     {
         public ICollection<Appointment> GetAllAppointments()
         {
-            PatientService patient = new PatientService();
+            
             List<Appointment> list = new List<Appointment>();
-            list.Add(new Appointment
+            for(int i=0;i<15;i++)
             {
-                AppointmentId = 1,
-                Patient = patient.GetPatient(),
-                Status = "Libre",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
+                list.Add(CreateAppointment(i, "Pendiente"));
+            }
+            for (int i = 0; i < 25; i++)
             {
-                AppointmentId = 2,
-                Patient = patient.GetPatient(),
-                Status = "Cancelada",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
+                list.Add(CreateAppointment(i, "Atendida"));
+            }
+            for (int i = 0; i < 8; i++)
             {
-                AppointmentId = 3,
-                Patient = patient.GetPatient(),
-                Status = "Libre",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 4,
-                Patient = patient.GetPatient(),
-                Status = "Libre",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 5,
-                Patient = patient.GetPatient(),
-                Status = "Cancelada",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 6,
-                Patient = patient.GetPatient(),
-                Status = "Pendiente",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 7,
-                Patient = patient.GetPatient(),
-                Status = "Pendiente",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 8,
-                Patient = patient.GetPatient(),
-                Status = "Pendiente",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 9,
-                Patient = patient.GetPatient(),
-                Status = "Pendiente",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
-            list.Add(new Appointment
-            {
-                AppointmentId = 10,
-                Patient = patient.GetPatient(),
-                Status = "Pendiente",
-                Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
-                Hour = DateTime.Now,
-                Severity = "Alta",
-                Folio = "00001"
-            });
+                list.Add(CreateAppointment(i, "Cancelada"));
+            }
+
+
             return list;
         }
+        private Appointment CreateAppointment(int id,string status)
+        {
+            PatientService patientService = new PatientService();
+            DoctorService doctorService = new DoctorService();
+            return new Appointment
+            {
+                AppointmentId = id,
+                Patient = patientService.GetPatientByUserId(2),
+                Doctor = doctorService.GetDoctor(),
+                Status = status,
+                Type = "Cita Medica",
+                AppointmentDate = DateTime.Now,
+                Hour = DateTime.Now,
+                Severity = "Alta",
+                Folio = "00001"
+            };
+        }
+        public ICollection<Appointment> GetAllAppointmentsByPatientId(int Id)
+        {
+            var patientsAppointments = GetAllAppointments().Where(x => x.Patient.Id == Id).ToList();
+            return patientsAppointments;
+        }
+        public ICollection<Appointment> GetAllAppointmentsByPatientId(int Id,string status)
+        {
+            var appointments = GetAllAppointments()
+                .Where(m => m.Status == status).ToList();
+            return appointments;
+        }
+
+
     }
 }

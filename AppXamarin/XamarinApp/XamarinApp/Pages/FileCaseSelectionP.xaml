@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.Pages.FileCaseSelectionP"
+             x:Class="XamarinApp.Pages.FileCaseSelectionForP"
              Title="Expediente médico"
              BackgroundColor="#4A4A4A">
   <ContentPage.Content>
@@ -15,11 +15,11 @@
               VerticalOptions="Center"
               HorizontalOptions="FillAndExpand"
               FontSize="14"
-              BackgroundColor="#4A4A4A"
-              TextColor="Gray"
+              BackgroundColor="#4A4A4A" 
+              TextColor="Gray" 
               Clicked="PatientInfoClicked"/>
 
-      <Button Text="Citas"
+      <Button Text="Historial de Citas"
               VerticalOptions="Center"
               HorizontalOptions="FillAndExpand"
               FontSize="14"

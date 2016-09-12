@@ -16,17 +16,17 @@
     <StackLayout Padding="90,30,90,30" Spacing="15" BackgroundColor="#222">
       <Image Source="http://www.medexp.com.mx/Static/Imgs/logo.png"
              HorizontalOptions="Center"
-             HeightRequest="180" />
+             HeightRequest="180" /> 
       <ActivityIndicator x:Name="waitActivityIndicator"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"/>
       <StackLayout Spacing="60">
-        <Entry x:Name="Username"
+        <Entry x:Name="UsernameEntry"
              Placeholder="Usuario"
              PlaceholderColor="#8c8c8c"
              BackgroundColor="#ffffff"
              TextColor="#000000"  />
-      <Entry x:Name="Password"
+      <Entry x:Name="PasswordEntry"
              PlaceholderColor="#8c8c8c"
              Placeholder="Contraseña"
              IsPassword="True"
@@ -39,7 +39,8 @@
               BackgroundColor="Transparent"
               FontSize="12"
               HorizontalOptions="Start"/>
-      <Button Text="Iniciar Sesión"
+      <Button 
+              Text="Iniciar Sesión"
               FontSize="20"
               HorizontalOptions="Center"
               Clicked="SignInPressed"

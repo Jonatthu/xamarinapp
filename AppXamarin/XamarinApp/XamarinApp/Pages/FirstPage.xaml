@@ -8,13 +8,13 @@
     <StackLayout BackgroundColor="#222" Orientation="Vertical" Padding="100">
         <Button Text="Información de la cuenta"
                 HorizontalOptions="Center"
-                BackgroundColor="#3399CC" 
+                BackgroundColor="#3399CC"  
                 WidthRequest="350"
                 Clicked="InformationClicked"/>
  
         <Button Text="Programar cita"
                 HorizontalOptions="Center"
-                BackgroundColor="#3399CC" 
+                BackgroundColor="#3399CC"
                 WidthRequest="350"
                 Clicked="ScheduleAppointmentClicked"/>
 
