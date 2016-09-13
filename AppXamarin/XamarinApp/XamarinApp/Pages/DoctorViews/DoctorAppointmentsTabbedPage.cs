@@ -32,10 +32,9 @@ namespace XamarinApp.Pages
                 Title = "Pendientes",
                 Icon = "logo.png"
             };
-
+            Children.Add(upcomingAppointmentsPage);
             Children.Add(attendedAppointmentsPage);
             Children.Add(canceledAppointmentsPage);
-            Children.Add(upcomingAppointmentsPage);
         }
     }
 }

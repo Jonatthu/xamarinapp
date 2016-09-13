@@ -14,13 +14,11 @@ namespace XamarinApp
     {
         public App()
         {
-            //var nav = new NavigationPage(new PatientMainPage(new PatientService().GetPatientByUserId(1)));
-            // The root page of your application
-            //var nav = new NavigationPage(new DoctorMainPage(2));
+            
             //nav.BarBackgroundColor = Color.FromHex("#222");
             //nav.BarTextColor = Color.White;
-            var nav = new NavigationPage(new PatientMainPage(new PatientService().GetPatientByUserId(1)));
-            //var nav = new NavigationPage(new FileCaseSelectionListView(1));
+            //var nav = new NavigationPage(new PatientMainPage(new PatientService().GetPatientByUserId(1)));
+            var nav = new NavigationPage(new DoctorMainPage(new DoctorService().GetDoctor().Id)); 
             MainPage = nav;
         }
 

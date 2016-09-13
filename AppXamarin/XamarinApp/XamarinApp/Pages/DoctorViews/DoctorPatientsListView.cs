@@ -121,7 +121,7 @@ namespace XamarinApp.Pages
             object item = e.SelectedItem;
             Patient patient = (Patient)item;
             int userId = patient.Id;
-            await Navigation.PushAsync(new FileCaseSelectionForP(userId));
+            await Navigation.PushAsync(new FileCaseSelectionListView(userId));
         }
     }
 }
