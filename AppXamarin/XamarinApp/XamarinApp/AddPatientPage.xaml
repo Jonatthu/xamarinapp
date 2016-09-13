@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.AddPatientPage">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout  Spacing="10">
+        <Label Text="Pacientes"
+               Font="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontAttributes="Bold" />
+        <!--<Entry x:Name="nombresEntry"
+               Placeholder="Nombres" />
+        <Entry x:Name="apellidosEntry"
+               Placeholder="Apellidos" />
+        <Entry x:Name="salarioEntry"
+               Placeholder="Salario"
+               Keyboard="Numeric" />
+        //-->
+        <Entry x:Name="nombreEntry"
+               Placeholder="Nombre" />
+        <Entry x:Name="curpEntry"
+               Placeholder="CURP" />
+        <Entry x:Name="religionEntry"
+               Placeholder="Religion" />
+        <Entry x:Name="ageEntry"
+               Placeholder="Edad"
+               Keyboard="Numeric"/>
+        <Entry x:Name="addressEntry"
+               Placeholder="Domicilio" />
+        <Entry x:Name="phoneEntry"
+               Placeholder="Telefono"
+               Keyboard="Numeric"/>
+        <Entry x:Name="emailEntry"
+               Placeholder="Correo" />
+        <Entry x:Name="hospitalEntry"
+               Placeholder="Hospital" />
+        <Entry x:Name="bloodtypeEntry"
+               Placeholder="Tipo de sangre" />
+        <Entry x:Name="emergencyNumberEntry"
+               Placeholder="Numero de emergencia"
+               Keyboard="Numeric"/>
+        <Entry x:Name="usernameEntry"
+               Placeholder="Usuario" />
+        <Entry x:Name="passwordEntry"
+               Placeholder="Contraseña" />
+        
+        <!--<StackLayout Orientation="Horizontal">
+          <Label Text="Fecha Contratación: "
+                 VerticalOptions="Center" />
+          <DatePicker x:Name="fechaContratoDatePicker" />
+          <Label Text="Activo: "
+                 VerticalOptions="Center" />
+          <Switch x:Name="activoSwitch"
+                  VerticalOptions="Center"
+                  IsToggled="True" />
+        </StackLayout>-->  
+        <Button x:Name="agregarButton"
+                Text="Agregar"
+                BackgroundColor="Navy"
+                TextColor="White" />
+        <ListView x:Name="listaListView" />
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+
+</ContentPage>

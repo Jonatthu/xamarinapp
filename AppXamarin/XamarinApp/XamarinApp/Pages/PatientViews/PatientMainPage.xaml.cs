@@ -32,5 +32,9 @@ namespace XamarinApp.Pages.PatientViews
         {
             await Navigation.PushAsync(new FileCaseSelectionListView(patientLoggedIn.Id));
         }
+        public async void MedexpConfigurationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfigurationPage());
+        }
     }
 }

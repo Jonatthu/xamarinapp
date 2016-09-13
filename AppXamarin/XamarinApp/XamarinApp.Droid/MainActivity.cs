@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace XamarinApp.Droid
 {
@@ -19,7 +20,9 @@ namespace XamarinApp.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
             ActionBar.SetIcon(Android.Resource.Color.Transparent);
+
         }
     }
+
 }
 

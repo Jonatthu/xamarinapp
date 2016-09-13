@@ -25,7 +25,7 @@
                        HeightRequest="40" />
                 <Label Text="{Binding AppoimentTitle}"
                        TextColor="Black"
-                       FontAttributes="Bold" />
+                       FontAttributes="Bold" />  
                 <Label Text="{Binding Place}"
                        TextColor="Black"/>
                 <Label Text="{Binding DoctorName}"
