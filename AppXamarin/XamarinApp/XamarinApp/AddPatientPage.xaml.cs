@@ -51,12 +51,12 @@ namespace XamarinApp
                 BloodType = bloodtypeEntry.Text,
                 CellphoneNumber = phoneEntry.Text,
                 CURP = curpEntry.Text,
-                Email = emailEntry.Text,
+                //Email = emailEntry.Text,
                 EmergencyNumber = emergencyNumberEntry.Text,
-                Hospital = hospitalEntry.Text,
+                //Hospital = hospitalEntry.Text,
                 Religion = religionEntry.Text,
-                Username = usernameEntry.Text,
-                Password = passwordEntry.Text
+                //Username = usernameEntry.Text,
+                //Password = passwordEntry.Text
 
 
             };

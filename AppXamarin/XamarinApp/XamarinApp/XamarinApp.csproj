@@ -55,7 +55,6 @@
     </Compile>
     <Compile Include="Pages\DoctorViews\DoctorPatientsListView.cs" />
     <Compile Include="Pages\FileCaseSelectionListView.cs" />
-    <Compile Include="Pages\AppointmentListView.cs" />
     <Compile Include="Pages\ConfigurationPage.xaml.cs">
       <DependentUpon>ConfigurationPage.xaml</DependentUpon>
     </Compile>
