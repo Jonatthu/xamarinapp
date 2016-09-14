@@ -21,7 +21,8 @@ namespace XamarinApp.Services
                 CURP = "sdfas3234234",
                 UserType = "Doctor",
                 AccountId = 2,
-                Id = 2
+                Id = 2,
+                Photo ="defaultPhoto.png"
             };
         }
     }

@@ -22,7 +22,7 @@ namespace XamarinApp.Pages
             //GetDoctorNameByDoctorId()
             this.Title= "Juan Manuel Gonzalez Perez";
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
-
+            CheckAppointments();
         }
 
         public async void PatientsClicked(object sender, EventArgs e)
@@ -43,5 +43,26 @@ namespace XamarinApp.Pages
         {
             await Navigation.PushAsync(new ConfigurationPage());
         }
+
+        public void CheckAppointments()
+        {
+            var appointments = new AppointmentService().GetAllAppointments().Where(s=> s.Status == "Pendiente");
+            var tomorrow = DateTime.Now.AddDays(1);
+            foreach (var item in appointments)
+            {
+                if(item.AppointmentDate.Month == DateTime.Now.Month)
+                {
+                    if((tomorrow.Day - item.AppointmentDate.Day) == 1)
+                    {
+                        DependencyService.Get<ILocalNotifications>().SendLocalNotification(
+                       "Cita pendiente",
+                       "Se cuenta con una cita programada para mañana, favor de estar al pendiente",
+                       0
+                       );
+                    }
+                }
+            }
+        }
+
     }
 }

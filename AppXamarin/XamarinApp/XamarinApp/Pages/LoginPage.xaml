@@ -21,7 +21,7 @@
                      HorizontalOptions="Center"
                      VerticalOptions="Center"/>
       <StackLayout Spacing="60">
-        <Entry x:Name="UsernameEntry"
+        <Entry x:Name="UsernameEntry"  
              Placeholder="Usuario"
              PlaceholderColor="#8c8c8c"
              BackgroundColor="#ffffff"

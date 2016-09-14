@@ -16,9 +16,24 @@ namespace PreSQLite
         {
             var config = DependencyService.Get<IConfig>();
             connection = new SQLiteConnection(config.Plataforma,
-                System.IO.Path.Combine(config.DirectorioDB, "Empleados.db3"));
-            connection.CreateTable<Patient>();
+                System.IO.Path.Combine(config.DirectorioDB, "Notifications.db3"));
+            connection.CreateTable<Notification>();
         }
+        #region Notification
+        public void InsertNotification(Notification notification)
+        {
+            connection.Insert(notification);
+        }
+
+        public void UpdateNotification(Notification notification)
+        {
+            connection.Update(notification);
+        }
+        public Notification GetNotification()
+        {
+            return connection.Table<Notification>().FirstOrDefault();
+        }
+        #endregion
 
         public void InsertPatient(Patient empleado)
         {

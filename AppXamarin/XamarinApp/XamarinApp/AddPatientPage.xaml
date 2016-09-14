@@ -10,14 +10,7 @@
                HorizontalOptions="Center"
                VerticalOptions="Center"
                FontAttributes="Bold" />
-        <!--<Entry x:Name="nombresEntry"
-               Placeholder="Nombres" />
-        <Entry x:Name="apellidosEntry"
-               Placeholder="Apellidos" />
-        <Entry x:Name="salarioEntry"
-               Placeholder="Salario"
-               Keyboard="Numeric" />
-        //-->
+
         <Entry x:Name="nombreEntry"
                Placeholder="Nombre" />
         <Entry x:Name="curpEntry"

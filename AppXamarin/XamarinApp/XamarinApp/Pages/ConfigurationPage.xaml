@@ -16,7 +16,8 @@
     </Grid>
 
     <Grid Grid.Column="1">
-      <Switch HorizontalOptions="Center"
+      <Switch x:Name="NotificationSwitch"
+              HorizontalOptions="Center"
               Toggled="Switch_OnToggled"
               VerticalOptions="Start"/>
     </Grid>

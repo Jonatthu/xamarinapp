@@ -24,8 +24,9 @@ namespace XamarinApp.Services
                 EmergencyNumber = "6642332760",
                 UserType = "Paciente",
                 AccountId = id,
-                Id = id
-
+                Id = id,
+                Photo = "defaultPhoto.png"
+                
             };
 
         }

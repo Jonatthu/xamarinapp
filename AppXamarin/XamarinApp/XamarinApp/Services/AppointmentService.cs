@@ -34,6 +34,7 @@ namespace XamarinApp.Services
         {
             PatientService patientService = new PatientService();
             DoctorService doctorService = new DoctorService();
+            int day = id;
             return new Appointment
             {
                 AppointmentId = id,
@@ -41,7 +42,8 @@ namespace XamarinApp.Services
                 Doctor = doctorService.GetDoctor(),
                 Status = status,
                 Type = "Cita Medica",
-                AppointmentDate = DateTime.Now,
+                AppointmentDate = new DateTime(2016,09,day+1,13,15,00),
+                //AppointmentDate = DateTime.Now,
                 Hour = DateTime.Now,
                 Severity = "Alta",
                 Folio = "00001"

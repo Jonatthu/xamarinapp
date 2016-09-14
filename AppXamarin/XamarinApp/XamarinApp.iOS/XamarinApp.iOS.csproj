@@ -67,12 +67,9 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer: Liusber Estrada (7BQ8Z5Y975)</CodesignKey>
+    <CodesignKey>iPhone Developer: a1217234@uabc.edu.mx (5BR2E3X5GM)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>fd388dfd-944d-4355-b689-0dbafb4e43c9</CodesignProvision>
-    <CodesignResourceRules />
-    <CodesignExtraArgs />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
