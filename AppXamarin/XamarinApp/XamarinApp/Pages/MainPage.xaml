@@ -4,6 +4,12 @@
               x:Class="XamarinApp.Pages.MainPage"
               Title="Citas programadas" BackgroundColor="#fafafa">
 
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Configuracion"
+                 Order="Secondary"
+                 Clicked="MedexpConfigurationClicked"/>
+  </ContentPage.ToolbarItems>
+
   <ContentPage.Content>
     <ListView  x:Name="CitasListView">
       <ListView.ItemTemplate>

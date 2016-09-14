@@ -32,5 +32,10 @@ namespace XamarinApp.Pages
         {
             await Navigation.PushAsync(new PatientAppointmentsTabbedPage(1));
         }
+
+        public async void MedexpConfigurationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfigurationPage());
+        }
     }
 }

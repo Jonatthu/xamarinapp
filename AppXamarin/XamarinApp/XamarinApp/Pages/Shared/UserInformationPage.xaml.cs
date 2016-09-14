@@ -19,5 +19,12 @@ namespace XamarinApp.Pages
             InitializeComponent();
             BindingContext = user;
         }
+
+        public async void MedexpConfigurationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfigurationPage());
+        }
     }
+
+
 }

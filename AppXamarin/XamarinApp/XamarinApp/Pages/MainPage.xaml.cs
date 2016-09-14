@@ -62,7 +62,10 @@ namespace XamarinApp.Pages
             }
         }
 
-        
+        public async void MedexpConfigurationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfigurationPage());
+        }
 
     }
 }

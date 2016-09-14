@@ -54,5 +54,10 @@ namespace XamarinApp.Pages
             var med = e.Item as Medicines;
             DisplayAlert("Selección realizada","Tocaste en ...","Ok");
         }
+
+        public async void MedexpConfigurationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfigurationPage());
+        }
     }
 }

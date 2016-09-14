@@ -38,5 +38,10 @@ namespace XamarinApp.Pages
             var appointments = new AppointmentService().GetAllAppointments();
             await Navigation.PushAsync(new DoctorAppointmentsTabbedPage(1));
         }
+
+        public async void MedexpConfigurationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfigurationPage());
+        }
     }
 }

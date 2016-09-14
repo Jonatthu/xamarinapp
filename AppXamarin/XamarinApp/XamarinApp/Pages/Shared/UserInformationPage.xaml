@@ -4,6 +4,12 @@
              x:Class="XamarinApp.Pages.UserInformationPage"
              Title="Informacion de usuario"
              BackgroundColor="#333333">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Configuracion"
+                 Order="Secondary"
+                 Clicked="MedexpConfigurationClicked"/>
+  </ContentPage.ToolbarItems>
   
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness" iOS="0,40,0,0" />

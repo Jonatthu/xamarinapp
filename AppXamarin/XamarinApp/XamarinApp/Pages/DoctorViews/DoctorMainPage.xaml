@@ -5,6 +5,11 @@
              BackgroundColor="#E8E8E8"
              Title="{Binding DoctorName}">
 
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Configuracion"
+                 Order="Secondary"
+                 Clicked="MedexpConfigurationClicked"/>
+  </ContentPage.ToolbarItems>
 
   <ScrollView>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" Padding="10">

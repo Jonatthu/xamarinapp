@@ -4,6 +4,13 @@
              x:Class="XamarinApp.Pages.FileCaseSelectionForP"
              Title="Expediente médico"
              BackgroundColor="#4A4A4A">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Configuracion"
+                 Order="Secondary"
+                 Clicked="MedexpConfigurationClicked"/>
+  </ContentPage.ToolbarItems>
+  
   <ContentPage.Content>
     <StackLayout Spacing="10" HorizontalOptions="FillAndExpand">
       <Label Text="Elegir una sección"
