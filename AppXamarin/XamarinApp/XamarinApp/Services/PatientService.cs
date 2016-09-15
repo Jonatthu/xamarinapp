@@ -27,6 +27,7 @@ namespace XamarinApp.Services
                 Id = id,
                 Photo = "defaultPhoto.png"
                 
+                
             };
 
         }

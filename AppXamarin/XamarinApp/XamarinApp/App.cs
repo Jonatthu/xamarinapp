@@ -14,11 +14,11 @@ namespace XamarinApp
     {
         public App()
         {
-            
+
             //nav.BarBackgroundColor = Color.FromHex("#222");
             //nav.BarTextColor = Color.White;
             //var nav = new NavigationPage(new PatientMainPage(new PatientService().GetPatientByUserId(1)));
-            var nav = new NavigationPage(new DoctorMainPage(new DoctorService().GetDoctor().Id)); 
+            var nav = new LoginPage();
             MainPage = nav;
         }
 

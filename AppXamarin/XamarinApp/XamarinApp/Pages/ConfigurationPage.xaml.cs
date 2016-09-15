@@ -35,7 +35,7 @@ namespace XamarinApp.Pages
             //Using cierra la conexión a la base de datos, una vez insertados los datos.
             using (var datos = new DataAccess())
             {
-                datos.InsertNotification(noti); //Inserta datos a la base de datos.
+                //datos.InsertNotification(noti); //Inserta datos a la base de datos.
                 datos.UpdateNotification(noti);
             }
 

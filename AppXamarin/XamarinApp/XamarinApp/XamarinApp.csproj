@@ -43,6 +43,7 @@
     <Compile Include="IConfig.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Helpers\UserNamesTypes.cs" />
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />

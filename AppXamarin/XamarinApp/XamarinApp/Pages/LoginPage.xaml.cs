@@ -56,8 +56,18 @@ namespace XamarinApp.Pages
             { 
                 waitActivityIndicator.IsRunning = true;
                 await Task.Delay(1500);
-                Patient patient = service.GetPatientByUserId(1);//modify to get a patient depending on userId
-                App.Current.MainPage = new NavigationPage(new PatientMainPage(patient));
+
+                if(service.GetUserNameType(UsernameEntry.Text)=="Paciente")
+                {
+                    Patient patient = service.GetPatientByUserId(1);
+                    App.Current.MainPage = new NavigationPage(new PatientMainPage(patient));
+                }
+                else if(service.GetUserNameType(UsernameEntry.Text)=="Doctor")
+                {
+                    Doctor doctor = service.GetDoctorByUserId(1);
+                    App.Current.MainPage = new NavigationPage(new DoctorMainPage(doctor));
+                }
+                
                 waitActivityIndicator.IsRunning = false;
                 UsernameEntry.Text = string.Empty;
                 PasswordEntry.Text = string.Empty;

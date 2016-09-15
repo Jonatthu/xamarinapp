@@ -17,7 +17,7 @@
     </Grid.ColumnDefinitions>
 
     <Grid Grid.Column="0"> 
-      <Label Text="Nombre: " TextColor="#4A4A4A" />
+      <Label Text="Nombre: " TextColor="#4A4A4A" /> 
       <Label Text="{Binding appointments.Patient.Name}" TextColor="#4A4A4A"/>
       <Label Text="CURP: " TextColor="#4A4A4A" />
       <Label Text="{Binding appointments.Patient.CURP}" TextColor="#4A4A4A"/>

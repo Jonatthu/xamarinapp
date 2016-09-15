@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-
+using XamarinApp.Models;
 using XamarinApp.Services;
 
 namespace XamarinApp.Pages
@@ -15,12 +15,12 @@ namespace XamarinApp.Pages
         public int DoctorId { get; set; }
         public string DoctorName { get; set; }
 
-        public DoctorMainPage(int DoctorId)
+        public DoctorMainPage(Doctor doctor)
         {
             InitializeComponent();
             this.DoctorId = DoctorId;
             //GetDoctorNameByDoctorId()
-            this.Title= "Juan Manuel Gonzalez Perez";
+            this.Title= doctor.Name;
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
             CheckAppointments();
         }
