@@ -61,12 +61,12 @@ namespace XamarinApp.Pages.PatientViews
                     RelativeLayout relativeLayout = new RelativeLayout();
 
                     relativeLayout.VerticalOptions = LayoutOptions.Center;
-                    //relativeLayout.Children.Add(patientsImage,
-                    //    Constraint.RelativeToParent((Parent) => { return Parent.X; }),
-                    //    Constraint.RelativeToParent((Parent) => { return (Parent.Y); }),
-                    //    Constraint.RelativeToParent((Parent) => { return Parent.Width * .12; }),
-                    //    Constraint.RelativeToParent((Parent) => { return Parent.Height * .8; })
-                    //    );
+                    relativeLayout.Children.Add(patientsImage,
+                        Constraint.RelativeToParent((Parent) => { return Parent.X; }),
+                        Constraint.RelativeToParent((Parent) => { return (Parent.Y); }),
+                        Constraint.RelativeToParent((Parent) => { return Parent.Width * .12; }),
+                        Constraint.RelativeToParent((Parent) => { return Parent.Height * .8; })
+                        );
 
 
                     StackLayout horizontalLayout = new StackLayout

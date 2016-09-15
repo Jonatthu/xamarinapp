@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PreSQLite;
 
 using Xamarin.Forms;
 using XamarinApp.Models;
@@ -22,7 +23,12 @@ namespace XamarinApp.Pages
             //GetDoctorNameByDoctorId()
             this.Title= doctor.Name;
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
-            CheckAppointments();
+            using (var datos = new DataAccess())
+            {
+                if(datos.GetNotification().Active == true)
+                    CheckAppointments();
+            }
+            
         }
 
         public async void PatientsClicked(object sender, EventArgs e)

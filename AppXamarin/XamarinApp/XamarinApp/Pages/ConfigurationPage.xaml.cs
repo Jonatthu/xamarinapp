@@ -18,7 +18,9 @@ namespace XamarinApp.Pages
             InitializeComponent();
             using (var datos = new DataAccess())
             {
-                NotificationSwitch.IsToggled = datos.GetNotification().Active;
+                var property = datos.GetNotification();
+                if (property != null)
+                    NotificationSwitch.IsToggled = datos.GetNotification().Active;
             }
         }
         public async void Switch_OnToggled(object sender, ToggledEventArgs e)
@@ -35,25 +37,18 @@ namespace XamarinApp.Pages
             //Using cierra la conexión a la base de datos, una vez insertados los datos.
             using (var datos = new DataAccess())
             {
-                //datos.InsertNotification(noti); //Inserta datos a la base de datos.
+                datos.InsertNotification(noti); //Inserta datos a la base de datos.
                 datos.UpdateNotification(noti);
             }
 
 
-            await DisplayAlert("Atención", "Las notificaciones se han guardado", "Entendido");
+            ////await DisplayAlert("Atención", "Las notificaciones se han guardado", "Entendido");
 
-            if (isToggled)
-            {
-                DependencyService.Get<ILocalNotifications>().SendLocalNotification(
-                    "Notification title",
-                    "Notification content / description",
-                    0
-                );
-                await DisplayAlert("Atención", "Las notificaciones se han activado", "Entendido");
+            //if (isToggled)
+            //    await DisplayAlert("Atención", "Las notificaciones se han activado", "Entendido");
 
-            }
-            else
-                await DisplayAlert("Atención", "Las notificaciones se han desactivado", "Entendido");
+            //else
+            //    await DisplayAlert("Atención", "Las notificaciones se han desactivado", "Entendido");
 
 
         }
