@@ -18,12 +18,12 @@ namespace XamarinApp.Pages
             InitializeComponent();
             using (var datos = new DataAccess())
             {
-                var property = datos.GetNotification();
-                if (property != null)
-                    NotificationSwitch.IsToggled = datos.GetNotification().Active;
+                var notification = datos.GetNotification();
+                if(notification != null)
+                    NotificationSwitch.IsToggled = notification.Active;
             }
         }
-        public async void Switch_OnToggled(object sender, ToggledEventArgs e)
+        public void Switch_OnToggled(object sender, ToggledEventArgs e)
         {
             bool isToggled = e.Value;
 
@@ -37,7 +37,7 @@ namespace XamarinApp.Pages
             //Using cierra la conexión a la base de datos, una vez insertados los datos.
             using (var datos = new DataAccess())
             {
-                datos.InsertNotification(noti); //Inserta datos a la base de datos.
+               // datos.InsertNotification(noti); //Inserta datos a la base de datos.
                 datos.UpdateNotification(noti);
             }
 

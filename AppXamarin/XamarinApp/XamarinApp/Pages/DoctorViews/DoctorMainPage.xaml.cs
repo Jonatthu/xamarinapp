@@ -23,11 +23,7 @@ namespace XamarinApp.Pages
             //GetDoctorNameByDoctorId()
             this.Title= doctor.Name;
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
-            using (var datos = new DataAccess())
-            {
-                if(datos.GetNotification().Active == true)
-                    CheckAppointments();
-            }
+            CheckAppointments();
             
         }
 

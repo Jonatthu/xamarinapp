@@ -91,7 +91,7 @@ namespace XamarinApp.Pages
                         );
                     relativeLayout.Children.Add(DateLabel,
                         Constraint.RelativeToParent((Parent) => { return Parent.X + Parent.Width * .50; }),
-                        Constraint.RelativeToParent((Parent) => { return (Parent.Y + Parent.Height * .70); }),
+                        Constraint.RelativeToParent((Parent) => { return (Parent.Y + Parent.Height * .90); }),
                         Constraint.RelativeToParent((Parent) => { return Parent.Width * .80; }),
                         Constraint.RelativeToParent((Parent) => { return Parent.Height; })
                         );
