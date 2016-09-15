@@ -8,14 +8,17 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Text="Config"
                  Order="Secondary"
-                 Clicked="MedexpConfigurationClicked"/> 
+                 Clicked="MedexpConfigurationClicked"/>
+    <ToolbarItem Text="Cerrar sesión"
+             Order="Secondary"
+             Clicked="SignOut"/>
   </ContentPage.ToolbarItems>
-  
+
   <ScrollView>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" Padding="10">
       <StackLayout Spacing="10" HorizontalOptions="Center" Padding="20">
         <Button
-                HorizontalOptions="CenterAndExpand"  
+                HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 BackgroundColor="Transparent"
                 Clicked="AppointmentsClicked"

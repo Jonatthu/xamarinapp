@@ -20,7 +20,15 @@ namespace XamarinApp.Pages.PatientViews
             patientLoggedIn = patient;
             NavigationPage.SetTitleIcon(this, "medexpLogo.png");
             Title = patient.Name;
-            CheckAppointments();
+            using (var datos = new DataAccess())
+            {
+                var notification = datos.GetNotification();
+                if (notification != null)
+                {
+                    if (notification.Active == true)
+                        CheckAppointments();
+                }
+            }
         }
         public async void AppointmentsClicked(object sender, EventArgs e)
         {
@@ -57,6 +65,11 @@ namespace XamarinApp.Pages.PatientViews
                     }
                 }
             }
+        }
+        public async void SignOut(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Se ha cerrado sesión", "OK");
+            App.Current.MainPage = new LoginPage();
         }
 
     }
