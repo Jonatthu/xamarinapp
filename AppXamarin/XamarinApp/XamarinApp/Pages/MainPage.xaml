@@ -11,7 +11,7 @@
   </ContentPage.ToolbarItems>
 
   <ContentPage.Content>
-    <ListView  x:Name="CitasListView">
+    <ListView  x:Name="CitasListView"> 
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
